@@ -1,256 +1,140 @@
-<!DOCTYPE html><html lang="pt-BR" dir="ltr"><head>
-<title>MultiBet</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Roboto:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
-<style>@media (max-width:640px){.atm-hidden-mobile{display:none}}@media (min-width:640px){.atm-hidden-desktop{display:none}}.col-span-1{grid-column: span 1 / span 1;}.col-span-2{grid-column: span 2 / span 2;}.items-center{align-items:center}.grid-cols-6{grid-template-columns: repeat(6, minmax(0, 1fr))}.grid-cols-5{	grid-template-columns: repeat(5, minmax(0, 1fr))}.grid-cols-4{grid-template-columns: repeat(4, minmax(0, 1fr))}.grid-cols-2{grid-template-columns: repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns: repeat(3, minmax(0, 1fr))}.grid-cols-1{grid-template-columns: repeat(1, minmax(0, 1fr))}.grid{display:grid}.basis-1\/2{flex-basis:50%}.flex{display:flex}.gap-1{gap:4px}.gap-2{gap:8px}.gap-4{gap:16px}.gap-6{gap:24px}.gap-12{48px}.gap-24{gap:96px}.justify-center{justify-content:center}.basis-full{flex-basis:100%}html{scroll-behavior:smooth;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}body,center,dd,del,div,dt,em,footer,h1,h2,h3,h4,h5,h6,i,iframe,img,p,q,s,small,span,strike,strong,sub,sup,table,tbody,td,tr,u{margin:-1px 0 0 0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:Roboto,sans-serif}.u{-moz-user-select:none;-webkit-user-select:none;cursor:default}table{border-collapse:collapse;border-spacing:0}body{line-height:1}body{background-color:#000000;overflow-x:hidden}iframe,img,svg{max-width:100%}h1,h1 b,h1 span,h2,h2 b,h2 span,h3,h3 b,h3 span{font-family:Poppins,sans-serif}a{text-decoration:none;font-family:Roboto,sans-serif}a.btn{font-family:Montserrat,sans-serif}em span.lg,em span.md,em span.sm{font-style:italic}@media (max-width:600px){.flex-large,.flex-small{margin-right:0!important;margin-bottom:16px}}.flexrow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center}.flex-large,.flex-small{flex-basis:100%}.flex-large:last-child,.flex-small:last-child{margin-right:0!important}@media (min-width:600px){.flex-small{flex:1;margin-bottom:0!important;padding-bottom:0!important}.flex-small.half{flex:0 0 calc(1 / 2 * 100%)}.flex-small.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-small.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-small.one-fourth{flex:0 0 calc(1 / 4 * 100%)}.flex-small.two-fourths{flex:0 0 calc(2 / 4 * 100%)}.flex-small.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-small.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-small.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:1000px){.flex-large{flex:1;margin-bottom:0}.flex-large.half{flex:0 0 calc(1 / 2 * 100%)}.flex-large.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-large.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-large.one-fourth,.flex-large.two-fourths{flex:0 0 calc(1 / 4 * 100%)}.flex-large.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-large.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-large.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:640px){.sm\:gap-1{gap:6px}.sm\:gap-2{gap:12px!important}.sm\:gap-4{gap:24px}.sm\:gap-6{gap:32px}.sm\:gap-12{gap:64px}.sm\:gap-24{gap:128px}.sm\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}</style>
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiBet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-family: Poppins, sans-serif;
+            color: #5bff00;
+            margin: 0;
+        }
+
+        .valid-message {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-top: 15px;
+            font-family: Montserrat, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .button-tKrbSK2222480-element {
+            background: #0fbe0f;
+            border-radius: 16px;
+            border: none;
+            color: #ffffff;
+            padding: 20px 40px; /* Aumenta o padding do botão */
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            text-align: center;
+            margin: 3vh auto 1.5vh auto; /* Ajusta as margens */
+            font-size: 1.5rem; /* Aumenta o tamanho da fonte do botão */
+            box-sizing: border-box;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .button-tKrbSK2222480-element:hover {
+            filter: brightness(1.2);
+        }
+
+        @media (max-width: 1200px) {
+            .button-tKrbSK2222480-element {
+                font-size: 1.3rem; /* Ajusta o tamanho da fonte do botão */
+                margin: 2.5vh auto 1.5vh auto;
+                padding: 16px 32px; /* Ajusta o padding */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .button-tKrbSK2222480-element {
+                font-size: 5vw; /* Ajusta o tamanho da fonte do botão */
+                padding: 16px 32px; /* Ajusta o padding */
+                margin: 2vh auto 1vh auto; /* Ajusta as margens */
+            }
+
+            .valid-message {
+                font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+            }
+
+            h1 {
+                font-size: 10vw; /* Ajusta o tamanho da fonte */
+            }
+        }
+
+        .zooming {
+            animation: zooming 1.25s ease infinite;
+        }
+
+        @keyframes zooming {
+            0% { transform: scale(1, 1); }
+            50% { transform: scale(1.1, 1.1); }
+            100% { transform: scale(1, 1); }
+        }
+
+        .headline {
+            margin: 3vh 0;
+            background-color: #000000;
+        }
+
+        .headline h1 {
+            text-align: center;
+            color: #5bff00;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 1200px) {
+            .headline h1 {
+                padding-bottom: 1vh;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .headline h1 {
+                font-size: 5vw;
+                padding-bottom: 1vh;
+            }
+        }
+    </style>
 </head>
 <body>
-<style>
-.valid-message {
-            font-size: 40px;
-            bold
-            color: #ffffff;
-            margin-top: 20px;
-            font-family:Montserrat,sans-serif;
-            font-style:italic;
-            font-weight: bold;
-}
-.jjzxND0750737 {display: none}
-@media (max-width: 640px) {
-html {overflow-x:hidden}
-}
-</style>
-<style>.zooming { animation: zooming 1.25s ease infinite; } @keyframes zooming { 0% { transform: scale(1, 1); } 50% { transform: scale(1.1, 1.1); } 100% { transform: scale(1, 1); } }</style>
-<div class="division-RNuFKX3945422__wrapper">
-<style>
-#division-RNuFKX3945422 {
-border: none;
-border-radius: ;
-margin: 10vh 0 0 0;
-position: relative;
-padding: 3vh 20vw 1vh 20vw;
-background-color: #000000;
-}
-@media (max-width:1200px) {
-#division-RNuFKX3945422 {
-padding: 2.25vh 15vw 0.75vh 15vw;
-margin: 10vh 0 0 0;
-}
-}
-@media (max-width:600px) {
-#division-RNuFKX3945422 {
-margin: 3.75vh 0 0 0;
-padding: 7.5vh 1.5vw 0.001vh 1.5vw;
-}
-}
-</style>
-<div id="division-RNuFKX3945422" class="WYgWMw0737356">
-<div class="headline-qjerjD3958830">
-<style>
-.headline-qjerjD3958830-element h1 {
-font-size: 2.31vw;
-text-align: center;
-padding-top: 2vh;
-padding-bottom: 2vh;
-color: #5bff00;
-line-height: 1.1;
-font-weight: 500;
-letter-spacing: px;
-false
-}
-@media (max-width: 1200px) {
-.headline-qjerjD3958830-element h1 {
-font-size: 2.80vw;
-padding-top: 1.5vh;
-padding-bottom: 1.5vh;
-}
-}
-@media (max-width: 640px) {
-.headline-qjerjD3958830-element h1 {
-font-size: 5.60vw;
-padding-top: 1.5vh;
-padding-bottom: 1.5vh;
-text-align: center;
-}
-}
-</style>
-<div class="headline-qjerjD3958830-element headline">
-<h1>
-<b>PARABÉNS!</b>
-</h1>
-</div>
-</div>
-</div>
-</div>
-<div class="division-JBCCck5341739__wrapper">
-<style>
-#division-JBCCck5341739 {
-border: none;
-border-radius: ;
-margin: -3vh 0 0 0;
-position: relative;
-padding: 3vh 20vw 3vh 20vw;
-background-color: #000000;
-}
-@media (max-width:1200px) {
-#division-JBCCck5341739 {
-padding: 2.25vh 15vw 2.25vh 15vw;
-margin: -3vh 0 0 0;
-}
-}
-@media (max-width:600px) {
-#division-JBCCck5341739 {
-margin: 0 0 0 0;
-padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-}
-}
-</style>
-<div id="division-JBCCck5341739" class="ozKYLq0737356">
-<div class="headline-MEBezj4072724">
-<style>
-.headline-MEBezj4072724-element h1 {
-font-size: 2.31vw;
-text-align: center;
-padding-top: 0vh;
-padding-bottom: 0vh;
-color: #5bff00;
-line-height: 1.1;
-font-weight: 500;
-letter-spacing: px;
-false
-}
-@media (max-width: 1200px) {
-.headline-MEBezj4072724-element h1 {
-font-size: 2.80vw;
-padding-top: 0vh;
-padding-bottom: 0vh;
-}
-}
-@media (max-width: 640px) {
-.headline-MEBezj4072724-element h1 {
-font-size: 5.60vw;
-padding-top: 1.5vh;
-padding-bottom: 1.5vh;
-text-align: center;
-}
-}
-</style>
-<div class="headline-MEBezj4072724-element headline">
-<h1>
-<b>&nbsp;<span style="color:#ffffff">SEU ACESSO FOI</span>&nbsp;LIBERADO!&nbsp;</b>
-</h1>
-</div>
-</div>
-<div class="button-tKrbSK2222480" style="padding-bottom: -50px;">
-<style>
-a.button-tKrbSK2222480-element {
-background: #0fbe0f;
-border-radius: 16px;
-border: none;
-color: #ffffff;
-padding: 16px 32px 16px 32px;
-font-weight: 600;
-display: block;
-width: fit-content;
-text-align: center;
-margin: 5vh auto 2vh auto;
-font-size: 1.49vw;
-box-sizing: border-box;
-max-width: 100%;
-transition: all 0.5s ease-in-out;
-}
-a.button-tKrbSK2222480-element:hover {
-filter: brightness(1.2);
-}
-@media (max-width: 1200px) {
-a.button-tKrbSK2222480-element {
-font-size: 1.69vw;
-margin: 3.3000000000000003vh auto 1.5vh auto;
-padding: 8px 16px 8px 16px;
-}
-}
-@media (max-width: 640px) {
-a.button-tKrbSK2222480-element {
-font-size: 4.13vw;
-padding: 12px 24px 12px 24px;
-margin: 2.5vh auto 1vh auto;
-width: ;
-}
-}
+    <div class="headline">
+        <h1><b>PARABÉNS!</b></h1>
+    </div>
 
-</style>
-<a href="https://chat.whatsapp.com/H8gfo2fnyC0DxehBpjIzIi" target="_self" class="btn button-tKrbSK2222480-element zooming">
-ENTRAR NA COMUNIDADE
-</a>
-</div>
-</div>
-</div>
-<div class="division-wkpfmF4169892__wrapper">
-<style>
-#division-wkpfmF4169892 {
-border: none;
-border-radius: ;
-margin: 0;
-position: relative;
-padding: 3vh 20vw 3vh 20vw;
-background-color: #000000;
-}
-@media (max-width:1200px) {
-#division-wkpfmF4169892 {
-padding: 2.25vh 15vw 2.25vh 15vw;
-margin: 0;
-}
-}
-@media (max-width:600px) {
-#division-wkpfmF4169892 {
-margin: 0;
-padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-}
-}
-</style>
-<div id="division-wkpfmF4169892" class="CQWHIy0737357">
-<div class="headline-bEhzGf4327825">
-<style>
-.headline-bEhzGf4327825-element h1 {
-font-size: 2.31vw;
-text-align: center;
-padding-top: 0vh;
-padding-bottom: 0vh;
-color: #ffffff;
-line-height: 1.1;
-font-weight: 600;
-letter-spacing: px;
-false
-}
-@media (max-width: 1200px) {
-.headline-bEhzGf4327825-element h1 {
-font-size: 2.80vw;
-padding-top: 0vh;
-padding-bottom: 0vh;
-}
-}
-@media (max-width: 640px) {
-.headline-bEhzGf4327825-element h1 {
-font-size: 5.60vw;
-padding-top: 1.5vh;
-padding-bottom: 1.5vh;
-text-align: center;
-}
-}
-</style>
-<div class="headline-bEhzGf4327825-element headline" >
-<h1>
-    <div id="valid-message" class="valid-message"></div>
-</h1>
-<br><h1 style="color: red; text-decoration: solid ;"> Últimas 3 vagas...</h1>
-<h1>    <img style="text-align: center; vertical-align:middle" src="./images/logo350px-300x296.webp" alt=""></h1>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script>
+    <div class="headline">
+        <h1><b>&nbsp;<span style="color:#ffffff">SEU ACESSO FOI</span>&nbsp;LIBERADO!&nbsp;</b></h1>
+    </div>
+
+    <div>
+        <a href="https://chat.whatsapp.com/H8gfo2fnyC0DxehBpjIzIi" target="_self" class="button-tKrbSK2222480-element zooming">
+            ENTRAR NA COMUNIDADE
+        </a>
+    </div>
+
+    <div class="headline">
+        <div id="valid-message" class="valid-message"></div>
+        <h1 style="color: red;">Últimas 3 vagas...</h1>
+        <img src="./images/logo350px-300x296.webp" alt="" style="max-width: 100%; height: auto;">
+    </div>
+
+    <script>
         function mostrarMensagemValida() {
             const hoje = new Date();
             const dia = String(hoje.getDate()).padStart(2, '0');
@@ -262,8 +146,7 @@ text-align: center;
             
             document.getElementById('valid-message').innerText = mensagem;
         }
-
-        // Ativa a função para mostrar a mensagem
         mostrarMensagemValida();
     </script>
-</body></html>
+</body>
+</html>
