@@ -7,6 +7,15 @@
 </head>
 <body>
 <style>
+.valid-message {
+            font-size: 40px;
+            bold
+            color: #ffffff;
+            margin-top: 20px;
+            font-family:Montserrat,sans-serif;
+            font-style:italic;
+            font-weight: bold;
+}
 .jjzxND0750737 {display: none}
 @media (max-width: 640px) {
 html {overflow-x:hidden}
@@ -133,7 +142,7 @@ text-align: center;
 </h1>
 </div>
 </div>
-<div class="button-tKrbSK2222480">
+<div class="button-tKrbSK2222480" style="padding-bottom: -50px;">
 <style>
 a.button-tKrbSK2222480-element {
 background: #0fbe0f;
@@ -230,21 +239,31 @@ text-align: center;
 }
 }
 </style>
-<div class="headline-bEhzGf4327825-element headline">
+<div class="headline-bEhzGf4327825-element headline" >
 <h1>
-Válido Até&nbsp;<span class="sm">22/07/2024</span>&nbsp;<br>
+    <div id="valid-message" class="valid-message"></div>
 </h1>
 <br><h1 style="color: red; text-decoration: solid ;"> Últimas 3 vagas...</h1>
+<h1>    <img style="text-align: center; vertical-align:middle" src="./images/logo350px-300x296.webp" alt=""></h1>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div style="text-align: center; display: inline-block; padding-left: 40%;">
-    <img style="text-align: center; vertical-align:middle" src="./images/logo350px-300x296.webp" alt="">
-</div>
-<script src="js/jjzxND0750737.js" charset="utf-8"></script>
-<script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
-<script type="text/javascript" defer="">document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
+<script>
+        function mostrarMensagemValida() {
+            const hoje = new Date();
+            const dia = String(hoje.getDate()).padStart(2, '0');
+            const mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+            const ano = hoje.getFullYear();
+            
+            const dataAtual = `${dia}/${mes}/${ano}`;
+            const mensagem = `Válido até ${dataAtual}`;
+            
+            document.getElementById('valid-message').innerText = mensagem;
+        }
 
+        // Ativa a função para mostrar a mensagem
+        mostrarMensagemValida();
+    </script>
 </body></html>
